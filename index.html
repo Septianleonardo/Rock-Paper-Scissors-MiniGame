@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <script>
+        // function to make computer pick rock, paper, or scissors random
+        function computerPlays() {
+            switch (Math.floor(Math.random() * 3)) {
+                case 0:
+                    return 'rock';
+                    break;
+                case 1:
+                    return 'paper';
+                    break;
+                case 2:
+                    return 'scissors';
+                    break;
+            }
+        }
+        // function to get user choice
+        function userPLays() {
+            let userChoise = prompt("Choose rock, paper, or scissors");
+            const rpsArr = ["rock", "paper", "scissors"];
+            while (!rpsArr.includes(userChoise.toLocaleLowerCase())) {
+                userChoise = prompt("Please choose rock, paper, or scissors")
+            }
+            return userChoise;
+        }
+        // Gets player and computer choice and checks logic
+        function playRound(playerSelection, computerSelection) {
+            let outcome;
+            if (playerSelection == computerSelection) {
+                outcome = "Draw";
+            } else if ((playerSelection == "rock" && computerSelection == "Scrissors") || (playerSelection == "paper" && computerSelection == "rock") || (playerSelection == "scissors" && computerSelection == "paper")) {
+                outcome = "Player";
+            } else {
+                outcome = "Computer";
+            }
+        }
+        // Main game function
+        function game() {
+            let roundCount = 0;
+            let playerScore = 0;
+            let computerScore = 0;
+            while (roundCount < 5) {
+                roundCount++;
+                let playerSelection = userPLays();
+                let computerSelection = computerPlays();
+                switch (playRound(playerSelection, computerSelection)) {
+                    case "Draw":
+                        console.log("Player chose " + playerSelection + ", Computer chose " + computerSelection + ". Draw.");
+                        break;
+                    case "Player":
+                        console.log("Player chose " + playerSelection + ", Computer chose " + computerSelection + ". Player wins.");
+                        playerScore++;
+                        break;
+                    case "Computer":
+                        console.log("Player chose " + playerSelection + ", Computer chose " + computerSelection + ". Computer wins.");
+                        computerScore++;
+                        break;
+                }
+                console.log("After round " + roundCount + ", Player is on " + playerScore + " points, computer is on " + computerScore + " points.")
+
+            }
+            console.log("Final scores.... Player: " + playerScore + " Computer: " + computerScore);
+            if (playerScore > computerScore) {
+                console.log("Player wins!");
+            } else if (playerScore < computerScore) {
+                console.log("Computer wins!");
+            } else {
+                console.log("It's a draw!");
+            }
+        }
+        game();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
