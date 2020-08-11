@@ -1,85 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors Game</title>
-    <script>
-        // function to make computer pick rock, paper, or scissors random
-        function computerPlays() {
-            switch (Math.floor(Math.random() * 3)) {
-                case 0:
-                    return 'rock';
-                    break;
-                case 1:
-                    return 'paper';
-                    break;
-                case 2:
-                    return 'scissors';
-                    break;
-            }
-        }
-        // function to get user choice
-        function userPLays() {
-            let userChoise = prompt("Choose rock, paper, or scissors");
-            const rpsArr = ["rock", "paper", "scissors"];
-            while (!rpsArr.includes(userChoise.toLocaleLowerCase())) {
-                userChoise = prompt("Please choose rock, paper, or scissors")
-            }
-            return userChoise;
-        }
-        // Gets player and computer choice and checks logic
-        function playRound(playerSelection, computerSelection) {
-            let outcome;
-            if (playerSelection == computerSelection) {
-                outcome = "Draw";
-            } else if ((playerSelection == "rock" && computerSelection == "Scrissors") || (playerSelection == "paper" && computerSelection == "rock") || (playerSelection == "scissors" && computerSelection == "paper")) {
-                outcome = "Player";
-            } else {
-                outcome = "Computer";
-            }
-        }
-        // Main game function
-        function game() {
-            let roundCount = 0;
-            let playerScore = 0;
-            let computerScore = 0;
-            while (roundCount < 5) {
-                roundCount++;
-                let playerSelection = userPLays();
-                let computerSelection = computerPlays();
-                switch (playRound(playerSelection, computerSelection)) {
-                    case "Draw":
-                        console.log("Player chose " + playerSelection + ", Computer chose " + computerSelection + ". Draw.");
-                        break;
-                    case "Player":
-                        console.log("Player chose " + playerSelection + ", Computer chose " + computerSelection + ". Player wins.");
-                        playerScore++;
-                        break;
-                    case "Computer":
-                        console.log("Player chose " + playerSelection + ", Computer chose " + computerSelection + ". Computer wins.");
-                        computerScore++;
-                        break;
-                }
-                console.log("After round " + roundCount + ", Player is on " + playerScore + " points, computer is on " + computerScore + " points.")
-
-            }
-            console.log("Final scores.... Player: " + playerScore + " Computer: " + computerScore);
-            if (playerScore > computerScore) {
-                console.log("Player wins!");
-            } else if (playerScore < computerScore) {
-                console.log("Computer wins!");
-            } else {
-                console.log("It's a draw!");
-            }
-        }
-        game();
-    </script>
+    <meta charset="utf-8">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div id="header">
+        <h1>Rock Paper & Scissors Mini Game</h1>
+        <h1>By Leonardo Dwigantoro</h1>
+    </div>
 
+    <div id="playerSelections">
+        <img src="blank.png" class="img" id="playerSelection">
+        <img src="blank.png" class="img" id="computerSelection">
+    </div>
+
+    <div id="score" class="score">
+        <p id="player" class="titles">Your Score</p>
+        <p id="computer" class="titles">Computer</p>
+        <p id="player" class="scores">0</p>
+        <p id="computer" class="scores">0</p>
+    </div>
+
+    <div id="round">
+        <p>Let's play! Please choose one below</p>
+    </div>
+
+    <div id="gameControls">
+        <img class="btn" src="Rock.png" width="80" height="80" alt="Rock">
+        <img class="btn" src="Paper.png" width="80" height="80" alt="Paper">
+        <img class="btn" src="Scissors.png" width="80" height="80" alt="Scissors">
+        <img class="btn" src="Reset.png" width="80" height="80" alt="reset">
+    </div>
+    <script src="scripts.js"></script>
 </body>
 
 </html>

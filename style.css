@@ -1,0 +1,111 @@
+body {
+    margin: 10px auto 0 auto;
+    display: block;
+    border: 5px 5px 5px 5px;
+    border-style: solid;
+    border-color: black;
+    width: 626px;
+}
+
+#header {
+    background-color: black;
+    color: aliceblue;
+    margin: 0px;
+    padding: 30px 0 30px 0;
+    text-align: center;
+}
+
+#playerSelections {
+    display: grid;
+    grid-template-columns: 310px 310px;
+    width: 624px;
+}
+
+#playerSelection {
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: 2px;
+    width: 314px;
+    height: 310px;
+}
+
+#computerSelection {
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: 2px;
+    border-left-style: solid;
+    border-left-color: black;
+    border-left-width: 2px;
+    width: 314px;
+    height: 310px;
+}
+
+.score {
+    display: grid;
+    grid-template-columns: 310px 310px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: 2px;
+    width: 626px;
+    height: 100px;
+    margin: 0;
+}
+
+.titles {
+    text-align: center;
+    vertical-align: middle;
+    color: black;
+    font-weight: bolder;
+    font-size: 1.5em;
+    margin: 0;
+    height: 50px;
+    width: 316px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: 2px;
+}
+
+.scores {
+    text-align: center;
+    vertical-align: middle;
+    color: black;
+    font-weight: bolder;
+    font-size: 2em;
+    margin: 0;
+    height: 50px;
+}
+
+#gameControls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 8px;
+    margin: 4px;
+}
+
+.btn:hover {
+    border-style: solid;
+    border-color: yellowgreen;
+    border-width: 2px;
+    border-radius: 8px;
+    margin: 4px;
+}
+
+#round {
+    text-align: center;
+    vertical-align: middle;
+    color: black;
+    font-weight: bold;
+    font-size: 1.5em;
+    height: 36px;
+    margin: 15px 0 0 0;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: 2px;
+}
