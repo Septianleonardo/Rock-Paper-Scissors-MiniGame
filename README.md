@@ -1,4 +1,17 @@
-This is a continuation of my rock-paper-scissors mini game.<br />
-I created this using HTML, CSS, and Vanila Javascript.<br /><br />
+# Rock, Paper, Scissors Mini Game
 
-Experience it here https://septianleonardo.github.io/Rock-Paper-Scissors-MiniGame/
+ A rock paper scissors mini game created with HTML, CSS, and Vanila Javascript.
+
+## Preview
+
+![preview-img](images/preview1.PNG)
+![preview-img](images/preview2.PNG)
+
+## Installation
+
+```bash
+Download files and run index.html
+```
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
